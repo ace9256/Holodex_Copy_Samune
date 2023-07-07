@@ -1,0 +1,40 @@
+#SamuneIcon {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-image: url("https://i.ibb.co/3fjN5vX/s3-R2-Yt-W-Joe-8w-SIp4-Pg-BA.png");
+  background-size: contain;
+}
+
+#SamuneIcon:before,
+#SamuneIcon:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  filter: blur(0);
+  z-index: 99;
+}
+
+.SamuneIconAnimation:before,
+.SamuneIconAnimation:after {
+  border: 2px solid transparent !important;
+  border-color: transparent !important;
+  filter: blur(2px);
+  transform: scale(4);
+  transition: 1000ms transform ease, 1000ms blur ease, 1000ms border-color ease;
+}
+
+.SamuneIconAnimation:after {
+  transition-delay: 100ms;
+}
